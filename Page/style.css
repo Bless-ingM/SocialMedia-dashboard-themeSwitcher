@@ -1,0 +1,432 @@
+@import url('https://fonts.googleapis.com/css2?family=Inter:wght@400;700&display=swap');
+:root{
+    /* Primary */
+    --limeGreen: hsl(163, 72%, 41%);
+    --brightRed: hsl(356, 69%, 56%);
+    --Facebook: hsl(195, 100%, 50%);
+    --Twitter: hsl(203, 89%, 53%);
+    --YouTube: hsl(348, 97%, 39%);
+    --Instagram: linear-gradient( );
+    /* Light Theme */
+    --Lighttoggle: hsl(230, 22%, 74%);
+
+    /* Neutral #### Dark Theme */
+    --veryDarkBlueBG: hsl(230, 17%, 14%);
+    --veryDarkBlueTopBGPattern: hsl(232, 19%, 15%);
+    --darkDesaturatedBlueCardBG: hsl(228, 28%, 20%);
+    --desaturatedBlueText: hsl(228, 34%, 66%);
+    --WhiteText: hsl(0, 0%, 100%);
+
+    /* Light Theme */
+    --WhiteBG: hsl(0, 0%, 100%);
+    --veryPaleBlueTopBGPattern: hsl(225, 100%, 98%);
+    --LightGrayishBlueCardBG: hsl(227, 47%, 96%);
+    --DarkGrayishBlueText: hsl(228, 12%, 44%);
+    --VeryDarkBlueText: hsl(230, 17%, 14%);
+
+}
+
+*,*::before,*::after{
+    box-sizing: border-box;
+    margin: 0;
+}
+
+body{
+    transition: background .5s linear;
+    font-size: 14px;
+    font-family: 'Inter', sans-serif;
+    background-color: var(--WhiteBG);
+}
+
+header{
+    transition: background .5s linear;
+    background-color: var(--veryPaleBlueTopBGPattern);
+    border-bottom-left-radius: 20px;
+    border-bottom-right-radius: 20px;
+    margin: 0;
+    padding: 1.3em;
+}
+header p{
+    color: var(--DarkGrayishBlueText);
+    padding: .3em 0;
+    font-weight: 600;
+}
+header .dark__mode{
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    margin: 1.5em 0;
+}
+span.line{
+    content: '';
+    position: absolute;
+    top: 70px;
+    left: 20px;
+    background-color: var(--DarkGrayishBlueText);
+    width: 90%;
+    height: 1px;
+    margin: .4em 0;
+}
+.dark__mode small{
+    color: var(--DarkGrayishBlueText);
+    font-weight: 600;
+
+}
+
+.label{
+    width: 50px;
+    height: 23px;
+    background-color: var(--Lighttoggle);
+    border-radius: 50px;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    position: relative;
+    padding: 5px;
+    cursor: pointer;
+    
+}
+
+.checkbox{
+    opacity: 0;
+    position: absolute;
+}
+
+.checkbox:checked + .label .ball{
+    transform: translateX(24px);
+}
+.fa-moon{
+    color: #f1c40f;
+}
+.fa-sun{
+    color: #f39c12;
+}
+
+.ball{
+    width: 18px;
+    height: 18px;
+    border-radius: 50px;
+    background: #fff;
+    position: absolute;
+    transition: transform .5s linear;
+    cursor: pointer;
+}
+main{
+    margin: 0 auto;
+    width: 100%;
+}
+
+.facebook{
+    background-color: var(--LightGrayishBlueCardBG);
+    width: 100%;
+    max-width: 300px;
+    height: 200px;
+    border-radius: 5px;
+    position: relative;
+    align-items: center;
+    margin: -1.5em auto 3em auto;
+    justify-content: space-evenly;
+    display: flex;
+    flex-direction: column;
+    transition: background .5s linear;
+
+    
+}
+.facebook::after{
+    content: '';
+    position: absolute;
+    width: 100%;
+    height: 5px;
+    top: 0;
+    left: 0;
+    border-top-left-radius: 10px;
+    border-top-right-radius:10px ;
+    background-color: var(--Facebook);
+}
+
+.facebook .face_icon{
+    display: flex;
+    align-items: center;
+    justify-content: space-evenly;
+}
+.face_icon p{
+    font-size: .4rem;
+    font-weight: 600;
+    margin-left:  1em;
+    color: var(--DarkGrayishBlueText);
+}
+h1{
+    font-size: 3rem;
+    font-weight: 900;
+    margin: 0;
+    padding: 0;
+    transition: color .5s linear;
+
+}
+h3{
+    color: var(--DarkGrayishBlueText);
+    font-weight: 100; 
+    letter-spacing: 3.5px;
+    text-transform: uppercase;
+    font-size: .7rem;
+    margin-top: -2.5em;
+
+}
+h2{
+    transition: color .5s linear;
+
+}
+
+.arrow_text{
+    display: flex;
+    align-items: center;
+}
+
+h5{
+    color: var(--limeGreen);
+    padding: 0 .2em;
+    font-size: .2rem;
+}
+
+.facebook.twitter::after{
+    content: '';
+    position: absolute;
+    width: 100%;
+    height: 5px;
+    top: 0;
+    left: 0;
+    border-top-left-radius: 10px;
+    border-top-right-radius:10px ;
+    background-color: var(--Twitter);
+}
+.facebook.instagram::after{
+    content: '';
+    position: absolute;
+    width: 100%;
+    height: 5px;
+    top: 0;
+    left: 0;
+    border-top-left-radius: 10px;
+    border-top-right-radius:10px ;
+    background-image: linear-gradient(
+                    to right,
+                    hsl(37, 97%, 70%), 
+                    hsl(329, 70%, 58%));
+}
+.facebook.youtube::after{
+    content: '';
+    position: absolute;
+    width: 100%;
+    height: 5px;
+    top: 0;
+    left: 0;
+    border-top-left-radius: 10px;
+    border-top-right-radius:10px ;
+    background-color: var(--brightRed);
+}
+.youtube .arrow_text h5{
+    color: var(--brightRed);
+}
+
+
+section.likes h2.over{
+    padding: 0 1.3em;
+    text-align: center;
+    margin: 0 auto;
+    color: var(--DarkGrayishBlueText);
+}
+section.likes .views .view{
+    background-color: var(--LightGrayishBlueCardBG);
+    width: 100%;
+    max-width: 300px;
+    height: 120px;
+    border-radius: 5px;
+    margin: 1em auto;
+    display: flex;
+    padding: 0 1.5em;
+    align-items: center;
+    justify-content: space-between;
+    transition: background .5s linear;
+}
+/* 
+section.likes .views .view h4{
+    transition: background 9s linear;
+
+} */
+.view .left, .right{
+    line-height: 2.3;
+}
+.view  p{
+    color: var(--DarkGrayishBlueText);
+    font-weight: 600;
+}
+.view .left h4{
+    font-size: 2em;
+    transition: color .5s linear;
+
+
+}
+.view .right small{
+    font-weight: 600;
+    font-size: .8rem;
+    color: var(--brightRed);
+}
+.view .right small.green{
+    color: var(--limeGreen);
+}
+.right .per {
+    margin-top: 1.5em ;
+    display: flex;
+    align-items: center;
+}
+footer{
+    transition: color .7s linear;
+    text-align: center;
+    margin: 1em 0;
+    font-size: .7rem;
+}
+footer a{
+    text-decoration: none;
+    color: var(--DarkGrayishBlueText);
+}
+
+/* Dark Mode */
+body.dark{
+    background-color: var(--veryDarkBlueBG);
+}
+body.dark header{
+    background-color: var(--veryDarkBlueTopBGPattern);
+}
+body.dark h2{
+    color: #fff;
+}
+body.dark .facebook{
+    background-color: var(--darkDesaturatedBlueCardBG);
+}
+body.dark h1{
+    color: var(--WhiteText);
+}
+body.dark section.likes .views .view  {
+    background-color: var(--darkDesaturatedBlueCardBG);
+}
+
+body.dark section.likes .views .view h4{
+    color: var(--WhiteText);
+}
+body.dark .checkbox:checked + .label .ball{
+    background-image: linear-gradient(
+                    to right,
+                    hsl(210, 78%, 56%), 
+                    hsl(146, 68%, 55%));
+}
+body.dark footer {
+    color: var(--WhiteText);
+}
+
+@media screen and (min-width:768px){
+    header{
+        height: 200px;
+    }
+
+    header .text{
+        display: flex;
+        align-items: center;
+        justify-content: space-between;
+    }
+
+    header .text .dark__mode small{
+        margin: 0 1em;
+        justify-content: space-between;
+    }
+
+    h2{
+        font-size: 2.5rem;
+    }
+    
+    p,small{
+        font-size: 1.1rem;
+    }
+    
+    span.line{
+        display: none;
+    }
+
+    .facebook{
+        max-width: 350px;
+        height: 300px;
+        width: 100%;
+        margin: -5em auto 7em auto;
+    }
+    .facebook h1{
+        font-size: 4rem;
+    }
+    .facebook p,h3{
+        font-size: 1rem;
+    }
+    .facebook h5{
+        font-size: .9rem;
+    }
+    section.likes .views .view{
+        max-width: 350px;
+        height: 150px;
+        width: 100%;
+    }
+    h2.over{
+    
+        font-size: 1.5rem;
+    }
+}
+
+@media only screen and (min-width:992px){
+    
+    header .text{
+        max-width: 1200px;
+        margin: 0 auto;
+    }
+    
+    .facebook{
+        width: 100%;
+        max-width: 261px;
+        height: 250px;
+        margin: -5em 1em 0 1em;
+        display: flex;        
+    }
+    
+    main section.followers{
+       width: 100%;
+       max-width: 1200px;
+       margin: 0 auto;
+        display: flex;
+        align-items: center;
+        flex-direction: row;
+        justify-content: space-between;
+    }
+
+    section.likes{
+    width: 100%;
+       max-width: 1200px;
+       margin: 0 auto;
+    }
+
+    section.likes .views .view{
+        width: 100%;
+        max-width: 261px;
+        height: 120px;
+    }
+    section.likes .views {
+        display: grid;
+        grid-template-columns: 1fr 1fr 1fr 1fr;
+        grid-row: 1fr 1fr;
+        gap: 15px;
+        margin: 0 1em;
+    }
+    .social h2{
+        font-size: 2rem;
+    }
+    section.likes h2.over{
+        margin: 0 .5em;
+        font-size: 2rem;
+        text-align: left;
+        padding:  2em 0 0 0;
+    }
+}
